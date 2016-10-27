@@ -1,0 +1,24 @@
+{
+  "name": "react-simple-flowchart",
+  "description": "The simple React flowchart component based on flowchart.js",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "author": "alwinn1977",
+  "repository": "alwinn1977/react-simple-flowchart",
+  "license": "MIT",
+  "scripts": {
+    "compile": "babel src --out-dir lib",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "prepublish": "npm run compile",
+    "test": "babel-node ./node_modules/.bin/isparta cover _mocha"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-preset-es2015-node4": "*",
+    "coveralls": "*",
+    "chai": "*",
+    "isparta": "*",
+    "mocha": "*",
+    "sinon": "*"
+  }
+}
