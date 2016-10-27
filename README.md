@@ -22,7 +22,7 @@ npm install react-simple-flowchart
 And include in your project:
 
 ```javascript
-import react-simple-flowchart from 'react-simple-flowchart';
+import Flowchart from 'react-simple-flowchart';
 ```
 
 ## License
