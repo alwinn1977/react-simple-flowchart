@@ -19,8 +19,7 @@ componentDidMount() {
 
 render() {
   return (
-    <div ref={c => this.chart = c} >
-    </div>
+    <div ref={c => this.chart = c} />
   );
 },
 });

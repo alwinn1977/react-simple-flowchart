@@ -9,7 +9,7 @@
 ![dev dependencies](https://img.shields.io/david/dev/alwinn1977/react-simple-flowchart.svg)
 ![License](https://img.shields.io/npm/l/react-simple-flowchart.svg)
 
-The simple React flowchart component based on [flowchart.js](https://github.com/adrai/flowchart.js)
+The simple React.js flowchart component based on [flowchart.js](https://github.com/adrai/flowchart.js)
 
 ## Getting Started
 
@@ -29,7 +29,7 @@ React.js (ES6) usage example:
 
 ```javascript
 render() {
-const code = 'st=>start: Start:>http://www.google.com[blank]\n' +
+const code =                                 'st=>start: Start:>http://www.google.com[blank]\n' +
                                              'e=>end:>http://www.google.com\n' +
                                              'op1=>operation: My Operation\n' +
                                              'sub1=>subroutine: My Subroutine\n' +
