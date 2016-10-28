@@ -78,7 +78,9 @@ const opt = {
                                               }
                                           };
 return(
+<div>
 <Flowchart chartCode={code} options={opt} />
+</div>
 );
 }
 ```
