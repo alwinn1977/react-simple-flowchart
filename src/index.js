@@ -12,14 +12,14 @@ componentDidMount() {
   const { chartCode, options } = this.props;
   const flow = FlowChart.parse(chartCode);
 
-  if (this.chart) {
-    flow.drawSVG(this.chart, options);
+  if (this.refs.chart) {
+    flow.drawSVG(this.refs.chart, options);
   }
 },
 
 render() {
   return (
-    <div ref={c => this.chart = c} />
+    <div ref="chart" />
   );
 },
 });
