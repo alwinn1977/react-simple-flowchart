@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import FlowChart from 'flowchart.js';
 
-const Flowchart = React.createClass({
+class Flowchart extends Component {
 
-  propTypes: {
+  static propTypes = {
     chartCode: React.PropTypes.string,
     options: React.PropTypes.object,
-  },
+  };
 
 componentDidMount() {
   const { chartCode, options } = this.props;
@@ -15,13 +15,13 @@ componentDidMount() {
   if (this.refs.chart) {
     flow.drawSVG(this.refs.chart, options);
   }
-},
+};
 
 render() {
   return (
     <div ref="chart" />
   );
-},
-});
+};
+};
 
 export default Flowchart;
