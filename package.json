@@ -1,7 +1,7 @@
 {
   "name": "react-simple-flowchart",
   "description": "The simple React flowchart component based on flowchart.js",
-  "version": "0.1.12",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "author": "alwinn1977",
   "repository": "alwinn1977/react-simple-flowchart",

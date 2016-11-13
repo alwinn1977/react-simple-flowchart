@@ -1,7 +1,5 @@
 # react-simple-flowchart
 
-![Build Status](https://img.shields.io/travis/alwinn1977/react-simple-flowchart.svg)
-![Coverage](https://img.shields.io/coveralls/alwinn1977/react-simple-flowchart.svg)
 ![Downloads](https://img.shields.io/npm/dm/react-simple-flowchart.svg)
 ![Downloads](https://img.shields.io/npm/dt/react-simple-flowchart.svg)
 ![npm version](https://img.shields.io/npm/v/react-simple-flowchart.svg)
