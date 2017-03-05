@@ -36,3 +36,8 @@ lib
 nbproject
 .idea
 .node_history
+
+demo/.tmp/
+demo/coverage/
+demo/dist/
+demo/node_modules/

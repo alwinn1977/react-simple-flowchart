@@ -8,20 +8,31 @@ class Flowchart extends Component {
     options: React.PropTypes.object,
   };
 
-componentDidMount() {
-  const { chartCode, options } = this.props;
-  const flow = FlowChart.parse(chartCode);
+  componentDidMount() {
+    const { chartCode, options } = this.props;
+    const flow = FlowChart.parse(chartCode);
 
-  if (this.refs.chart) {
-    flow.drawSVG(this.refs.chart, options);
-  }
-};
+    if (this.refs.chart) {
+      flow.drawSVG(this.refs.chart, options);
+    }
+  };
 
-render() {
-  return (
-    <div ref="chart" />
-  );
-};
-};
+  componentDidUpdate() {
+    const { chartCode, options } = this.props;
+    const flowNew = FlowChart.parse(chartCode);
+
+    if (this.refs.chart) {
+      this.refs.chart.removeChild(this.refs.chart.children[0]);
+      flowNew.drawSVG(this.refs.chart, options);
+    }
+  };
+
+  render() {
+    return (
+      <div ref="chart" />
+    );
+  };
+}
+;
 
 export default Flowchart;

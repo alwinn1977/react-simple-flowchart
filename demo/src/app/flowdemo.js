@@ -1,31 +1,3 @@
-# react-simple-flowchart
-
-![Downloads](https://img.shields.io/npm/dm/react-simple-flowchart.svg)
-![Downloads](https://img.shields.io/npm/dt/react-simple-flowchart.svg)
-![npm version](https://img.shields.io/npm/v/react-simple-flowchart.svg)
-![dependencies](https://img.shields.io/david/alwinn1977/react-simple-flowchart.svg)
-![dev dependencies](https://img.shields.io/david/dev/alwinn1977/react-simple-flowchart.svg)
-![License](https://img.shields.io/npm/l/react-simple-flowchart.svg)
-
-The simple React.js flowchart component based on [flowchart.js](https://github.com/adrai/flowchart.js)
-
-## Getting Started
-
-Install it via npm:
-
-```shell
-npm install react-simple-flowchart
-```
-
-And include in your project:
-
-```javascript
-import Flowchart from 'react-simple-flowchart';
-```
-
-React.js (ES6) usage example:
-
-```javascript
 import React, {Component} from 'react';
 import Flowchart from 'react-simple-flowchart';
 
@@ -120,13 +92,3 @@ export class Flowdemo extends Component {
     );
   }
 }
-
-```
-
-See [flowchart.js](https://github.com/adrai/flowchart.js) to learn more about flowchart and options syntax.
-
-See example of realtime flowchart editor in demo folder.
-
-## License
-
-MIT
