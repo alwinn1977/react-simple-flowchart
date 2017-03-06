@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Flowchart from 'react-simple-flowchart';
 
 
@@ -50,20 +50,19 @@ export class Flowdemo extends Component {
       code,
       opt,
     }
-    this.handleCodeChange.bind(this);
   }
 
   handleCodeChange(e) {
     this.setState({
       code: e.target.value,
-    })
+    });
 
   }
 
   handleOptChange(e) {
     this.setState({
       opt: JSON.parse(e.target.value),
-    })
+    });
 
   }
 

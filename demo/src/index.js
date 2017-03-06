@@ -6,6 +6,6 @@ import {Flowdemo} from './app/flowdemo';
 import './index.css';
 
 ReactDOM.render(
-  <Flowdemo/>,
+  <Flowdemo />,
   document.getElementById('root')
 );

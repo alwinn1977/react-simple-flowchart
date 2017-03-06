@@ -26,7 +26,7 @@ import Flowchart from 'react-simple-flowchart';
 React.js (ES6) usage example:
 
 ```javascript
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Flowchart from 'react-simple-flowchart';
 
 
@@ -78,20 +78,19 @@ export class Flowdemo extends Component {
       code,
       opt,
     }
-    this.handleCodeChange.bind(this);
   }
 
   handleCodeChange(e) {
     this.setState({
       code: e.target.value,
-    })
+    });
 
   }
 
   handleOptChange(e) {
     this.setState({
       opt: JSON.parse(e.target.value),
-    })
+    });
 
   }
 
@@ -120,12 +119,23 @@ export class Flowdemo extends Component {
     );
   }
 }
-
 ```
+
+It will be looks as below:
+
+[react-simple-flowchart usage example](assets/screenshot.png)
 
 See [flowchart.js](https://github.com/adrai/flowchart.js) to learn more about flowchart and options syntax.
 
-See example of realtime flowchart editor in demo folder.
+See example of realtime flowchart editor in demo folder:
+
+```shell
+
+cd demo
+npm install
+npm run serve
+```
+Then open localhost:3000 in your browser.
 
 ## License
 
