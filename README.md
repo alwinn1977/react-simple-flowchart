@@ -123,7 +123,7 @@ export class Flowdemo extends Component {
 
 It will be looks as below:
 
-[react-simple-flowchart usage example](assets/screenshot.png)
+![react-simple-flowchart usage example](assets/screenshot.png)
 
 See [flowchart.js](https://github.com/adrai/flowchart.js) to learn more about flowchart and options syntax.
 
