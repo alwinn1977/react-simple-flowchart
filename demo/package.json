@@ -2,7 +2,7 @@
   "dependencies": {
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
-    "react-simple-flowchart": "^1.1.1"
+    "react-simple-flowchart": "^1.1.2"
   },
   "devDependencies": {
     "react-addons-test-utils": "^15.0.1",

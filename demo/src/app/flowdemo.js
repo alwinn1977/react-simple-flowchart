@@ -6,13 +6,15 @@ export class Flowdemo extends Component {
 
   constructor(props) {
     super(props);
-    const code = 'st=>start: Begin\n' +
-      'e=>end: End:>http://www.google.com\n' +
-      'op1=>operation: Operation 1|department1\n' +
-      'op2=>operation: Operation 2|department2\n' +
-      'op3=>operation: Operation 3|department2\n' +
-      'op4=>operation: Operation 4|department2\n' +
-      'st(right)->op1(right)->op2(right)->op3(right)->op4(right)->e';
+    const code =
+      `st=>start: Begin
+e=>end: End:>http://www.google.com
+op1=>operation: Operation 1|department1
+op2=>operation: Operation 2|department2
+op3=>operation: Operation 3|department2
+op4=>operation: Operation 4|department2
+st(right)->op1(right)->op2(right)->op3(right)->op4(right)->e`;
+
     const opt = {
       x: 0,
       y: 0,
