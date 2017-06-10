@@ -53,7 +53,7 @@ cond(no)->e`;
     this.state = {
       code,
       opt,
-      nodeText: 'none',
+      elementText: 'none',
     }
   }
 
@@ -72,7 +72,7 @@ cond(no)->e`;
   }
 
   render() {
-    const { code, opt, nodeText } = this.state;
+    const { code, opt, elementText } = this.state;
     return (
       <div>
         <p>Edit flowchart in real time!</p>
@@ -91,7 +91,7 @@ cond(no)->e`;
         />
         <br /><br />
         <p>Result</p>
-        <p>Last Clicked Node: <strong>{nodeText}</strong></p>
+        <p>Last Clicked Node: <strong>{elementText}</strong></p>
         <Flowchart
           chartCode={code}
           options={opt}
