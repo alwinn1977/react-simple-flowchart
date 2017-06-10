@@ -34,9 +34,7 @@ class Flowchart extends Component {
   };
 
   handleClick(e) {
-    if (e.target.tagName === 'tspan') {
       this.props.onClick(e.target.innerHTML);
-    }
   }
 
   render() {
