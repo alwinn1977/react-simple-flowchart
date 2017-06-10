@@ -23,7 +23,25 @@ And include in your project:
 import Flowchart from 'react-simple-flowchart';
 ```
 
-React.js (ES6) usage example:
+## Component's Props
+
+### chartCode
+
+It is a required prop. It containes a special code that defines a flowchart structure.
+ See [flowchart.js](https://github.com/adrai/flowchart.js) for details.
+
+### options
+
+It is a required prop. It containes options for flowchart elements (colors, line styles, etc).
+ See [flowchart.js](https://github.com/adrai/flowchart.js) for details.
+
+### onClick
+
+It is an optional event handler for the onClick event, which occurs when flowchart symbol
+ have been clicked. It receives elementText argument that contains text of clicked symbol. 
+ See example below for this prop's usage details.
+
+## React.js (ES6) usage example:
 
 ```javascript
 import React, { Component } from 'react';
@@ -34,13 +52,16 @@ export class Flowdemo extends Component {
 
   constructor(props) {
     super(props);
-    const code = 'st=>start: Begin\n' +
-      'e=>end: End:>http://www.google.com\n' +
-      'op1=>operation: Operation 1|department1\n' +
-      'op2=>operation: Operation 2|department2\n' +
-      'op3=>operation: Operation 3|department2\n' +
-      'op4=>operation: Operation 4|department2\n' +
-      'st(right)->op1(right)->op2(right)->op3(right)->op4(right)->e';
+    const code =
+      `st=>start: Begin
+e=>end: End
+op1=>operation: Operation 1|department1
+op2=>operation: Operation 2|department2
+sub=>subroutine: Go To Google|external:>http://www.google.com
+cond=>condition: Google?
+st(right)->op1(right)->op2(right)->cond(yes)->sub(bottom)
+cond(no)->e`;
+
     const opt = {
       x: 0,
       y: 0,
@@ -71,12 +92,14 @@ export class Flowdemo extends Component {
       flowstate: {
         department1: { fill: 'pink' },
         department2: { fill: 'yellow' },
+        external: { fill: 'green' },
       },
     };
 
     this.state = {
       code,
       opt,
+      nodeText: 'none',
     }
   }
 
@@ -95,7 +118,7 @@ export class Flowdemo extends Component {
   }
 
   render() {
-    const { code, opt } = this.state;
+    const { code, opt, nodeText } = this.state;
     return (
       <div>
         <p>Edit flowchart in real time!</p>
@@ -114,11 +137,17 @@ export class Flowdemo extends Component {
         />
         <br /><br />
         <p>Result</p>
-        <Flowchart chartCode={code} options={opt} />
+        <p>Last Clicked Node: <strong>{nodeText}</strong></p>
+        <Flowchart
+          chartCode={code}
+          options={opt}
+          onClick={nodeText => this.setState({nodeText})}
+        />
       </div>
     );
   }
 }
+
 ```
 
 It will be looks as below:

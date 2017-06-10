@@ -8,12 +8,13 @@ export class Flowdemo extends Component {
     super(props);
     const code =
       `st=>start: Begin
-e=>end: End:>http://www.google.com
+e=>end: End
 op1=>operation: Operation 1|department1
 op2=>operation: Operation 2|department2
-op3=>operation: Operation 3|department2
-op4=>operation: Operation 4|department2
-st(right)->op1(right)->op2(right)->op3(right)->op4(right)->e`;
+sub=>subroutine: Go To Google|external:>http://www.google.com
+cond=>condition: Google?
+st(right)->op1(right)->op2(right)->cond(yes)->sub(bottom)
+cond(no)->e`;
 
     const opt = {
       x: 0,
@@ -45,12 +46,14 @@ st(right)->op1(right)->op2(right)->op3(right)->op4(right)->e`;
       flowstate: {
         department1: { fill: 'pink' },
         department2: { fill: 'yellow' },
+        external: { fill: 'green' },
       },
     };
 
     this.state = {
       code,
       opt,
+      nodeText: 'none',
     }
   }
 
@@ -69,7 +72,7 @@ st(right)->op1(right)->op2(right)->op3(right)->op4(right)->e`;
   }
 
   render() {
-    const { code, opt } = this.state;
+    const { code, opt, nodeText } = this.state;
     return (
       <div>
         <p>Edit flowchart in real time!</p>
@@ -88,7 +91,12 @@ st(right)->op1(right)->op2(right)->op3(right)->op4(right)->e`;
         />
         <br /><br />
         <p>Result</p>
-        <Flowchart chartCode={code} options={opt} />
+        <p>Last Clicked Node: <strong>{nodeText}</strong></p>
+        <Flowchart
+          chartCode={code}
+          options={opt}
+          onClick={elementText => this.setState({elementText})}
+        />
       </div>
     );
   }

@@ -5,9 +5,14 @@ import FlowChart from 'flowchart.js';
 class Flowchart extends Component {
 
   static propTypes = {
-    chartCode: PropTypes.string,
-    options: PropTypes.object,
+    chartCode: PropTypes.string.isRequired,
+    options: PropTypes.object.isRequired,
+    onClick: PropTypes.func
   };
+
+  static defaultProps = {
+    onClick: () => null
+};
 
   componentDidMount() {
     const { chartCode, options } = this.props;
@@ -28,9 +33,15 @@ class Flowchart extends Component {
     }
   };
 
+  handleClick(e) {
+    if (e.target.tagName === 'tspan') {
+      this.props.onClick(e.target.innerHTML);
+    }
+  }
+
   render() {
     return (
-      <div ref={div => this.chart = div} />
+      <div ref={div => this.chart = div} onClick={e => this.handleClick(e)} />
     );
   };
 }
