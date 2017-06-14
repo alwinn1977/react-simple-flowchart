@@ -38,7 +38,21 @@ It is a required prop. It containes options for flowchart elements (colors, line
 ### onClick
 
 It is an optional event handler for the onClick event, which occurs when flowchart symbol
- have been clicked. It receives elementText argument that contains text of clicked symbol. 
+ have been clicked. It receives elementText argument that contains text or id of clicked symbol.
+  
+  For example, if you use in chartCode:
+  ```
+  
+  op1=>operation: Operation 1|department1
+  
+  ```
+  
+  symbol id will be "op1" and symbol text will be "Operation 1". If you will click on symbol 
+  aside from the text, onClick will receive "op1", but if you will click on text,
+   it will receive "Operation 1". Of course, it is not very convenient,
+    but unfortunately in flowchart.js text labels are not nested in the symbols and have no ids.
+    Therefore, you should include the processing of both text and ids in your code.
+  
  See example below for this prop's usage details.
 
 ## React.js (ES6) usage example:

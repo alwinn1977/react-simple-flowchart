@@ -34,7 +34,13 @@ class Flowchart extends Component {
   };
 
   handleClick(e) {
+    if (e.target.tagName === 'tspan') {
       this.props.onClick(e.target.innerHTML);
+    }
+    if (e.target.tagName === 'rect' || e.target.tagName === 'path') {
+      this.props.onClick(e.target.id);
+    }
+
   }
 
   render() {
