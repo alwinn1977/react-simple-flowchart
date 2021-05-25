@@ -39,20 +39,20 @@ It is a required prop. It containes options for flowchart elements (colors, line
 
 It is an optional event handler for the onClick event, which occurs when flowchart symbol
  have been clicked. It receives elementText argument that contains text or id of clicked symbol.
-  
+
   For example, if you use in chartCode:
   ```
-  
+
   op1=>operation: Operation 1|department1
-  
+
   ```
-  
-  symbol id will be "op1" and symbol text will be "Operation 1". If you will click on symbol 
+
+  symbol id will be "op1" and symbol text will be "Operation 1". If you will click on symbol
   aside from the text, onClick will receive "op1", but if you will click on text,
    it will receive "Operation 1". Of course, it is not very convenient,
     but unfortunately in flowchart.js text labels are not nested in the symbols and have no ids.
     Therefore, you should include the processing of both text and ids in your code.
-  
+
  See example below for this prop's usage details.
 
 ## React.js (ES6) usage example:
@@ -164,21 +164,13 @@ cond(no)->e`;
 
 ```
 
+See and try this example at [CodeSandbox](https://codesandbox.io/s/react-simple-flowchart-example-jbm2u?file=/src/Flowdemo.js:0-2290)
+
 It will be looks as below:
 
 ![react-simple-flowchart usage example](assets/screenshot.png)
 
 See [flowchart.js](https://github.com/adrai/flowchart.js) to learn more about flowchart and options syntax.
-
-See example of realtime flowchart editor in demo folder:
-
-```shell
-
-cd demo
-npm install
-npm run serve
-```
-Then open localhost:3000 in your browser.
 
 ## License
 
